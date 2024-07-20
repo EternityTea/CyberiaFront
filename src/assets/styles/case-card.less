@@ -1,0 +1,117 @@
+@import '_vars';
+
+.case-card {
+  position: relative;
+  display: block;
+  height: 378px;
+  text-decoration: none;
+  border-radius: 12px;
+  overflow: hidden;
+
+  &__img {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+
+    img {
+      transition: @longTransition;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name-block {
+    position: absolute;
+    top: 23px;
+    right: 27px;
+    width: 122px;
+    height: 122px;
+    border-radius: 6px;
+    background-color: @lightGrey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__description {
+    display: none;
+  }
+
+  &__name {
+    .font(@f24, 600);
+    color: @white;
+    width: min-content;
+    text-align: center;
+  }
+
+  &__icon {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+  }
+
+  &:hover {
+    .case-card {
+      &__img {
+        img {
+          transition: @longTransition;
+          scale: 1.2;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: @mediaXM) {
+    &__name-block {
+      flex-direction: column;
+      justify-content: end;
+      align-items: start;
+      padding: 23px 29px;
+      top: unset;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(1, 1, 1, 0);
+      gap: @m6;
+      flex-wrap: nowrap;
+      z-index: 3;
+    }
+
+    &__icon {
+      position: static;
+      top: unset;
+      right: unset;
+
+      img {
+        width: 17px;
+        color: @white;
+      }
+    }
+
+    &__name {
+      .font(@f24, 500, @fontRubik);
+      width: 100%;
+      text-align: start;
+    }
+
+    &__description {
+      .font(@f13, 400, @fontSans);
+      color: @white;
+      display: flex;
+      left: 0;
+      bottom: 0;
+    }
+
+    &__shadow {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      box-shadow: inset 0 -14px 61px @shadowGrey;
+      z-index: 2;
+    }
+  }
+}

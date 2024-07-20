@@ -1,0 +1,12 @@
+@import '_vars';
+
+.cases-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: @m31 @m40;
+
+  @media screen and (max-width: @mediaXM) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: @m20;
+  }
+}

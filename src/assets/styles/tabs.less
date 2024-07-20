@@ -1,0 +1,36 @@
+@import '_vars';
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+
+  &__item {
+    .font(@f24);
+    transition: @baseTransition;
+    background-color: @lightGrey;
+    color: @white;
+    cursor: pointer;
+    border-radius: 7px;
+    padding: 10px 29px;
+    box-shadow: 8px 15px 29px @shadowGrey;
+
+    &--active {
+      transition: @baseTransition;
+      background-color: @blue;
+    }
+  }
+
+  @media screen and (max-width: @mediaL) {
+    display: grid;
+    grid-gap: 7.6px;
+    grid-template-columns: 1fr 1fr;
+
+    &__item {
+      .font(@f12, 400, @fontRubik);
+      text-align: center;
+      padding: 8.5px 0;
+    }
+  }
+}

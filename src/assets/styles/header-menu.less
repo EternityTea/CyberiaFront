@@ -1,0 +1,50 @@
+@import '_vars';
+
+.header-menu {
+  position: absolute;
+  width: calc(100% - @m24 * 2);
+  height: calc(100% - @m42 * 2);
+  background: @grey;
+  z-index: 999;
+  padding: @m42 @m24;
+
+  &__close {
+    display: flex;
+    justify-content: end;
+  }
+
+  &__page-list {
+    margin: @m8 0 @m47;
+    display: flex;
+    flex-direction: column;
+    gap: @m30;
+  }
+
+  &__page-item {
+    .font(@f18);
+    color: @titleWhite;
+  }
+
+  &__contacts {
+    padding: @m38 0 @m44;
+    border-top: 2px solid @lightestGrey;
+    border-bottom: 2px solid @lightestGrey;
+  }
+
+  &__contacts-title {
+    .font(@f18);
+    margin-bottom: @m42;
+    color: @darkWhite;
+  }
+
+  &__contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: @m19;
+  }
+
+  &__contacts-item {
+    .font(@f16);
+    color: @darkWhite;
+  }
+}

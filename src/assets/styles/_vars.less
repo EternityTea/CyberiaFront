@@ -1,0 +1,74 @@
+@fontFira: 'Fira Sans Condensed';
+@fontSans: 'Open Sans';
+@fontRubik: 'Rubik';
+
+//цвета
+@background-gradient: linear-gradient(#24252F, #31313F, #242530);
+@grey: #24252F;
+@darkGrey: #20212C;
+@lightestGrey: #2B2D3A;
+@white: #FFF;
+@titleWhite: #EFF3FF;
+@darkWhite: #9AA8BA;
+@lightGrey: #313341;
+@shadowGrey: #171B2C69;
+@blue: #2D76F9;
+
+//размеры шрифта
+@f12: 12px;
+@f13: 13px;
+@f16: 16px;
+@f18: 18px;
+@f21: 21px;
+@f24: 24px;
+@f48: 48px;
+
+//отступы
+@m2: 2px;
+@m6: 6px;
+@m8: 8px;
+@m11: 11px;
+@m12: 12px;
+@m13: 13px;
+@m15: 15px;
+@m19: 19px;
+@m20: 20px;
+@m22: 22px;
+@m24: 24px;
+@m26: 26px;
+@m28: 28px;
+@m30: 30px;
+@m31: 31px;
+@m32: 32px;
+@m38: 38px;
+@m40: 40px;
+@m42: 42px;
+@m43: 43px;
+@m44: 44px;
+@m45: 45px;
+@m47: 47px;
+@m52: 52px;
+@m64: 64px;
+@m66: 66px;
+@m78: 78px;
+@m89: 89px;
+@m128: 128px;
+
+
+//миксины
+.font(@fontSize, @weight: 400, @font: @fontFira, @lineHeight: 0.8) {
+  font-family: @font;
+  font-size: @fontSize;
+  line-height: @fontSize/@lineHeight;
+  font-weight: @weight;
+}
+
+//время
+@baseTransition: .3s;
+@longTransition: .5s;
+
+//размеры экранов
+@mediaXS: 375px;
+@mediaXM: 768px;
+@mediaL: 1024px;
+@mediaXL: 1240px;
